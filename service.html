@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud 83 || services</title>
+    <!-- flaticon -->
+    <link rel="icon" href="img//flaticon.png">
+    <!-- bootstrap 5 5.0.2 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- link css header -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="css/media.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins';
+    }
+
+    .clearfix {
+        clear: both;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+
+
+    .banner {
+        background-image: url(img/service_page/images/background);
+        width: 100%;
+        padding: 220px 0;
+        background-size: cover;
+        /* position: relative; */
+        z-index: -1;
+    }
+
+    .banner p {
+        font-size: 60px;
+    }
+
+    .box_liti {
+        width: 150px;
+        height: 5px;
+        border-radius: 10px;
+        background-color: #2fcea5;
+    }
+
+    h4 {
+        text-align: center;
+        margin: 30px 0;
+        color: #444
+    }
+
+    .main-timeline {
+        position: relative
+    }
+
+    .main-timeline:before {
+        content: "";
+        width: 5px;
+        height: 100%;
+        border-radius: 20px;
+        margin: 0 auto;
+        background: #242922;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0
+    }
+
+    .main-timeline .timeline {
+        display: inline-block;
+        margin-bottom: 50px;
+        position: relative
+    }
+
+    .main-timeline .timeline:before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        background: #ec496e;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%)
+    }
+
+    .main-timeline .timeline-icon {
+        display: inline-block;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 3px solid #ec496e;
+        padding: 13px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translateY(-50%)
+    }
+
+    .main-timeline .timeline-icon i {
+        display: block;
+        border-radius: 50%;
+        background: #ec496e;
+        font-size: 64px;
+        color: #fff;
+        line-height: 100px;
+        z-index: 1;
+        position: relative
+    }
+
+    .main-timeline .timeline-icon:after,
+    .main-timeline .timeline-icon:before {
+        content: "";
+        width: 100px;
+        height: 4px;
+        background: #ec496e;
+        position: absolute;
+        top: 50%;
+        right: -100px;
+        transform: translateY(-50%)
+    }
+
+    .main-timeline .timeline-icon:after {
+        width: 70px;
+        height: 50px;
+        background: transparent;
+        top: 89px;
+        right: -30px
+    }
+
+    .main-timeline .timeline-content {
+        width: 50%;
+        padding: 0 50px;
+        margin: 52px 0 0;
+        float: right;
+        position: relative
+    }
+
+    .main-timeline .timeline-content:before {
+        content: "";
+        width: 70%;
+        height: 100%;
+        border: 3px solid #ec496e;
+        border-top: none;
+        border-right: none;
+        position: absolute;
+        bottom: -13px;
+        left: 35px
+    }
+
+    .main-timeline .timeline-content:after {
+        content: "";
+        width: 37px;
+        height: 3px;
+        background: #ec496e;
+        position: absolute;
+        top: 13px;
+        left: 0
+    }
+
+    .main-timeline .title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #ec496e;
+        text-transform: uppercase;
+        margin: 0 0 5px
+    }
+
+    .main-timeline .description {
+        display: inline-block;
+        font-size: 16px;
+        color: #404040;
+        line-height: 20px;
+        letter-spacing: 1px;
+        margin: 0
+    }
+
+    .main-timeline .timeline:nth-child(even) .timeline-icon {
+        left: auto;
+        right: 30%
+    }
+
+    .main-timeline .timeline:nth-child(even) .timeline-icon:before {
+        right: auto;
+        left: -103px
+    }
+
+    .main-timeline .timeline:nth-child(even) .timeline-icon:after {
+        right: auto;
+        left: -30px
+    }
+
+    .main-timeline .timeline:nth-child(even) .timeline-content {
+        float: left
+    }
+
+    .main-timeline .timeline:nth-child(even) .timeline-content:before {
+        left: auto;
+        right: 35px;
+        transform: rotateY(180deg)
+    }
+
+    .main-timeline .timeline:nth-child(even) .timeline-content:after {
+        left: auto;
+        right: 0
+    }
+
+    .main-timeline .timeline:nth-child(2n) .timeline-content:after,
+    .main-timeline .timeline:nth-child(2n) .timeline-icon i,
+    .main-timeline .timeline:nth-child(2n) .timeline-icon:before,
+    .main-timeline .timeline:nth-child(2n):before {
+        background: #f9850f
+    }
+
+    .main-timeline .timeline:nth-child(2n) .timeline-icon {
+        border-color: #f9850f
+    }
+
+    .main-timeline .timeline:nth-child(2n) .title {
+        color: #f9850f
+    }
+
+    .main-timeline .timeline:nth-child(2n) .timeline-content:before {
+        border-left-color: #f9850f;
+        border-bottom-color: #f9850f
+    }
+
+    .main-timeline .timeline:nth-child(3n) .timeline-content:after,
+    .main-timeline .timeline:nth-child(3n) .timeline-icon i,
+    .main-timeline .timeline:nth-child(3n) .timeline-icon:before,
+    .main-timeline .timeline:nth-child(3n):before {
+        background: #8fb800
+    }
+
+    .main-timeline .timeline:nth-child(3n) .timeline-icon {
+        border-color: #8fb800
+    }
+
+    .main-timeline .timeline:nth-child(3n) .title {
+        color: #8fb800
+    }
+
+    .main-timeline .timeline:nth-child(3n) .timeline-content:before {
+        border-left-color: #8fb800;
+        border-bottom-color: #8fb800
+    }
+
+    .main-timeline .timeline:nth-child(4n) .timeline-content:after,
+    .main-timeline .timeline:nth-child(4n) .timeline-icon i,
+    .main-timeline .timeline:nth-child(4n) .timeline-icon:before,
+    .main-timeline .timeline:nth-child(4n):before {
+        background: #2fcea5
+    }
+
+    .main-timeline .timeline:nth-child(4n) .timeline-icon {
+        border-color: #2fcea5
+    }
+
+    .main-timeline .timeline:nth-child(4n) .title {
+        color: #2fcea5
+    }
+
+    .main-timeline .timeline:nth-child(4n) .timeline-content:before {
+        border-left-color: #2fcea5;
+        border-bottom-color: #2fcea5
+    }
+
+    .cards {
+        background-image: url(/img/service_page/images/pattern.png.webp);
+        width: 100%;
+        padding-bottom: 120px;
+        background-repeat: repeat;
+    }
+
+    .white-mode {
+        text-decoration: none;
+        padding: 17px 40px;
+        background-color: yellow;
+        border-radius: 3px;
+        color: black;
+        transition: .1s ease-in-out;
+        position: absolute;
+        left: 15px;
+        bottom: 15px
+    }
+
+    .pricingTable {
+        text-align: center;
+        background: #fff;
+        margin: 0 -15px;
+        box-shadow: 0 0 10px #ababab;
+        padding-bottom: 40px;
+        border-radius: 10px;
+        color: #cad0de;
+        transform: scale(1);
+        transition: all .5s ease 0s
+    }
+
+    .pricingTable:hover {
+        transform: scale(1.05);
+        z-index: 1
+    }
+
+    .pricingTable .pricingTable-header {
+        padding: 40px 0;
+        background: #f5f6f9;
+        border-radius: 10px 10px 50% 50%;
+        transition: all .5s ease 0s
+    }
+
+    .pricingTable:hover .pricingTable-header {
+        background: #ff9624
+    }
+
+    .pricingTable .pricingTable-header i {
+        font-size: 50px;
+        color: #858c9a;
+        margin-bottom: 10px;
+        transition: all .5s ease 0s
+    }
+
+    .pricingTable .price-value {
+        font-size: 35px;
+        color: #ff9624;
+        transition: all .5s ease 0s
+    }
+
+    .pricingTable .month {
+        display: block;
+        font-size: 14px;
+        color: #cad0de
+    }
+
+    .pricingTable:hover .month,
+    .pricingTable:hover .price-value,
+    .pricingTable:hover .pricingTable-header i {
+        color: #fff
+    }
+
+    .pricingTable .heading {
+        font-size: 24px;
+        color: #ff9624;
+        margin-bottom: 20px;
+        text-transform: uppercase
+    }
+
+    .pricingTable .pricing-content ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px
+    }
+
+    .pricingTable .pricing-content ul li {
+        line-height: 30px;
+        color: #a7a8aa
+    }
+
+    .pricingTable .pricingTable-signup a {
+        display: inline-block;
+        font-size: 15px;
+        color: #fff;
+        padding: 10px 35px;
+        border-radius: 20px;
+        background: #ffa442;
+        text-transform: uppercase;
+        transition: all .3s ease 0s
+    }
+
+    .pricingTable .pricingTable-signup a:hover {
+        box-shadow: 0 0 10px #ffa442
+    }
+
+
+    .pricingTable.green .heading,
+    .pricingTable.green .price-value {
+        color: #2fcea5
+    }
+
+    .pricingTable.green .pricingTable-signup a,
+    .pricingTable.green:hover .pricingTable-header {
+        background: #2fcea5
+    }
+
+    .pricingTable.green .pricingTable-signup a:hover {
+        box-shadow: 0 0 10px #2fcea5
+    }
+
+    .pricingTable.blue:hover .price-value,
+    .pricingTable.green:hover .price-value,
+    .pricingTable.red:hover .price-value {
+        color: #fff
+    }
+
+    .maincard {
+        margin: 60px 0 0 0;
+    }
+
+    /* faq */
+
+
+    .spad {
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+
+    .accordion-area .panel {
+        margin-bottom: 6px;
+    }
+
+    .accordion-area .panel-link:after {
+        content: "+";
+        position: absolute;
+        font-size: 16px;
+        right: 0;
+        top: 0;
+        line-height: 16px;
+        width: 54px;
+        height: 100%;
+        text-align: center;
+        background: #556080;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .accordion-area .panel-header .panel-link.collapsed:after {
+        content: "+";
+    }
+
+    .accordion-area .panel-link.active:after {
+        content: "-";
+    }
+
+    .accordion-area .panel-link {
+        text-align: left;
+        position: relative;
+        width: 100%;
+        padding: 17px 65px 17px 20px;
+        padding-left: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        background: #25ae88;
+        color: #fff;
+        line-height: 1;
+        cursor: pointer;
+        border: none;
+        min-height: 51px;
+    }
+
+    .accordion-area .panel-body {
+        padding: 25px 37px 30px;
+        background: #f4f7fa;
+    }
+
+    .accordion-area .panel-body p {
+        margin-bottom: 0;
+    }
+
+
+    @media screen and (max-width:990px) {
+        .pricingTable {
+            margin: 0 0 20px
+        }
+    }
+
+    /* MEDIA QUERY */
+    @media (max-width: 768px) {
+        .timeline-content p {
+            display: none;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .user_hide {
+            display: none;
+        }
+
+        .description {
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            display: none;
+        }
+
+        .main-timeline .timeline-icon:after,
+        .main-timeline .timeline-icon:before {
+            display: none;
+            border: none;
+        }
+
+        ::before {
+            background-color: transparent;
+        }
+
+        .main-timeline .timeline-content:after {
+            display: none;
+        }
+
+        .main-timeline .timeline-content:before {
+            display: none;
+        }
+
+        .main-timeline .timeline-icon {
+            position: static;
+            transform: translate(0);
+        }
+
+        .main-timeline .timeline:before {
+            display: none;
+        }
+
+        .main-timeline .timeline {
+            width: calc(50% - 20px);
+            position: static;
+            float: none !important;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-timeline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .main-timeline .timeline-content {
+            width: auto;
+            height: auto;
+            padding: 0;
+            margin: 0;
+            position: static;
+            float: none !important;
+        }
+
+        .main-timeline .description {
+            display: none;
+        }
+
+        .add-pic {
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .main-timeline .timeline-icon:before {
+            display: none;
+        }
+
+    }
+</style>
+
+<body>
+
+    <!-- header -->
+    <header>
+
+        <div class="container d-flex  align-items-center">
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="img/service_page/images/RUiN1Zy+mtEVb77CgE=.webp" alt="logo">
+            </div>
+            <!-- NAVIGATION -->
+            <nav>
+
+                <ul class="d-flex ">
+                    <li>
+                        <div class="logo d-sm-none pt-4 pb-3">
+                            <img src="img/service_page/images/RUiN1Zy+mtEVb77CgE=.webp" alt="logo" width="50%"
+                                height="10%">
+                        </div>
+                    </li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="About_us.html">ABOUT US</a></li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                    <li class="d-sm-none pt-4 pb-3">
+                        <i class="fa-brands fa-instagram px-2 text-success"></i>
+                        <i class="fa-brands fa-linkedin-in px-2 text-success"></i>
+                        <i class="fa-brands fa-behance px-2 text-success"></i>
+                    </li>
+                </ul>
+            </nav>
+            <!-- NAV-TOGGLE FOR RESPONSIVE -->
+            <div class="navbar-toggle"><i class="fa-solid fa-bars text-light"></i></div>
+
+        </div>
+
+    </header>
+    <!-- BANNER -->
+    <section>
+        <div class="banner col-12">
+            <p class="text-white text-center">SERVICES</p>
+        </div>
+    </section>
+    <!-- service -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="content text-center col-12">
+                    <h6 class="text-dark pt-5">The only ones</h6>
+                    <h1 class="pb-3">Our Best Services</h1>
+                    <div class="box_liti mx-auto"></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="main-timeline">
+                        <a href="#" class="timeline ">
+                            <div class="timeline-icon"><i class="fa fa-globe"></i></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Web Designer</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ducimus
+                                    officiis quod! Aperiam eveniet nam nostrum odit quasi ullam voluptatum.
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="timeline ">
+                            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Vps Hosting</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ducimus
+                                    officiis quod! Aperiam eveniet nam nostrum odit quasi ullam voluptatum.
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="timeline ">
+                            <div class="timeline-icon"><i class="fa fa-briefcase"></i></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Shared Hosting</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ducimus
+                                    officiis quod! Aperiam eveniet nam nostrum odit quasi ullam voluptatum.
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="timeline ">
+                            <div class="timeline-icon"><i class="fa fa-globe"></i></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Dedicated Hosting</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ducimus
+                                    officiis quod! Aperiam eveniet nam nostrum odit quasi ullam voluptatum.
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="timeline ">
+                            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Cloud Hosting</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ducimus
+                                    officiis quod! Aperiam eveniet nam nostrum odit quasi ullam voluptatum.
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="timeline ">
+                            <div class="timeline-icon"><i class="fa fa-mobile"></i></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Reseller Hosting</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ducimus
+                                    officiis quod! Aperiam eveniet nam nostrum odit quasi ullam voluptatum.
+                                </p>
+                            </div>
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cards -->
+    <section class="cards ">
+        <div class="container">
+            <div class="row ">
+                <div class="content text-center col-12">
+                    <h6 class="text-white pt-5">The only ones</h6>
+                    <h1 class="pb-2 text-white">Our Best Services</h1>
+                    <div class="box_liti mx-auto "></div>
+                </div>
+                <div class="col-md-3 col-sm-6 maincard maincard mx-auto">
+                    <div class="pricingTable">
+                        <div class="pricingTable-header">
+                            <i class="fa fa-mobile"></i>
+                            <div class="price-value"> $5.99 <span class="month">per month</span> </div>
+                        </div>
+                        <h3 class="heading">Cloud Hosting</h3>
+                        <div class="pricing-content">
+                            <ul>
+                                <li><b>10GB</b> File storage
+                                </li>
+                                <li>Unlimited websites
+                                </li>
+                                <li><b>24/7</b> Support
+                                </li>
+                                <li>Discount code engine
+                                </li>
+                                <li>All OS Supported
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pricingTable-signup">
+                            <a href="#">Get Plan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 maincard mx-auto">
+                    <div class="pricingTable green">
+                        <div class="pricingTable-header">
+                            <i class="fa fa-rocket"></i>
+                            <div class="price-value"> $7.99 <span class="month">per month</span> </div>
+                        </div>
+                        <h3 class="heading">VPS Hosting</h3>
+                        <div class="pricing-content">
+                            <ul>
+                                <li><b>10GB</b> File storage
+                                </li>
+                                <li>Unlimited websites
+                                </li>
+                                <li><b>24/7</b> Support
+                                </li>
+                                <li>Discount code engine
+                                </li>
+                                <li>All OS Supported
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pricingTable-signup">
+                            <a href="#">GET PLAN</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 maincard mx-auto">
+                    <div class="pricingTable red">
+                        <div class="pricingTable-header">
+                            <i class="fa fa-globe"></i>
+                            <div class="price-value"> $9.99 <span class="month">per month</span> </div>
+                        </div>
+                        <h3 class="heading">Dedicated Hosting
+                        </h3>
+                        <div class="pricing-content">
+                            <ul>
+                                <li><b>10GB</b> File storage
+                                </li>
+                                <li>Unlimited websites
+                                </li>
+                                <li><b>24/7</b> Support
+                                </li>
+                                <li>Discount code engine
+                                </li>
+                                <li>All OS Supported
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pricingTable-signup">
+                            <a href="#">GET PLAN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ -->
+    <section>
+        <div class="add-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 add-pic">
+                        <img src="img/service_page/images/add.jpg" alt="" style="width: 100%;">
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="accordion" class="accordion-area">
+                            <div class="panel">
+                                <div class="panel-header" id="headingOne">
+                                    <button class="panel-link active" data-toggle="collapse" data-target="#collapse1"
+                                        aria-expanded="true" aria-controls="collapse1">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.</button>
+                                </div>
+                                <div id="collapse1" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordion">
+                                    <div class="panel-body">
+                                        <p>Phasellus vehicula tempus orci vel consequat. Nullam lorem sem, viverra a
+                                            rutrum sed, gravida mattis magna. Suspendisse vitae commodo quam. Quisque a
+                                            enim et ante vulputate finibu.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-header" id="headingTwo">
+                                    <button class="panel-link" data-toggle="collapse" data-target="#collapse2"
+                                        aria-expanded="false" aria-controls="collapse2">Ipsum dolor sit amet,
+                                        consectetur adipiscing elit.</button>
+                                </div>
+                                <div id="collapse2" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordion">
+                                    <div class="panel-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper
+                                            venenatis turpis eget suscipit. Orci varius natoque penatibus et magnis dis
+                                            parturient montes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-header active" id="headingThree">
+                                    <button class="panel-link" data-toggle="collapse" data-target="#collapse3"
+                                        aria-expanded="false" aria-controls="collapse3">Etiam at nibh non dolor
+                                        porttitor fermentum eu vel mi.</button>
+                                </div>
+                                <div id="collapse3" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordion">
+                                    <div class="panel-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper
+                                            venenatis turpis eget suscipit. Orci varius natoque penatibus et magnis dis
+                                            parturient montes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- footer -->
+    <footer class="text-center text-lg-start text-muted " style="background-color: #1f2430;">
+        <section>
+            <div class="container text-center text-md-start pt-3">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h2 class="text-uppercase fw-bold mb-4">
+                            <img src="img/about_us/images/logo.webp" alt="logo">
+                        </h2>
+                        <p>
+                            Sed ultrices interdum libero, laoreet facilisis dui fringilla ut. Nullam nisi sem, tristique
+                            ut sapien nec, tempus auctor purus. Maecenas eu lectus non dolor euismod dignissim vitae vel
+                            tortor.
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4 bah">
+                            Our Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">web Hosting</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Reseller Hosting</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">VPS Hosting</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Dedicated Servers</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Windows Hosting</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Cloud Hosting</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4 bah">
+                            Our Solutions
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Reseller Hosting</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Web Hosting</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Linux Servers</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Wordpress Hosting</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Windows Hosting</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">VPS Hosting</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4 bah">Contact</h6>
+                        <p> New York, NY 10012, US</p>
+                        <p>
+                            info@example.com
+                        </p>
+                        <p> + 01 234 567 88</p>
+                        <p> + 01 234 567 89</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-4" style="background-color: #171b26">
+            © 2022 Copyright:
+            <a class="text-reset fw-bold" href="#">CLOUD83.com</a>
+        </div>
+    </footer>
+    <!-- header script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+
+    <!-- JQUERY FOR RESPOSIVE MENU -->
+    <script>
+        $(document).ready(function () {
+            $(".navbar-toggle").click(function () {
+                $("header").toggleClass("demo")
+            });
+        });
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>
